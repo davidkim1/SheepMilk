@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 public class SheepMilk extends ApplicationAdapter {
 	SpriteBatch batch;
 	Texture img;
+	String hello = "Hello";
 	
 	@Override
 	public void create () {
