@@ -9,6 +9,7 @@ import com.sheepmilk.game.states.GameStateManager;
 import com.sheepmilk.game.states.MenuState;
 
 public class SheepMilk extends ApplicationAdapter {
+
 	public static final int WIDTH = 480;
 	public static final int HEIGHT = 800;
 
@@ -18,9 +19,8 @@ public class SheepMilk extends ApplicationAdapter {
 
 	private Music music;
 
-
 	@Override
-	public void create () {
+	public void create() {
 		batch = new SpriteBatch();
 		gsm = new GameStateManager();
 		music = Gdx.audio.newMusic(Gdx.files.internal("music.mp3"));
@@ -32,7 +32,7 @@ public class SheepMilk extends ApplicationAdapter {
 	}
 
 	@Override
-	public void render () {
+	public void render() {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		gsm.update(Gdx.graphics.getDeltaTime());
 		gsm.render(batch);
