@@ -90,3 +90,4 @@ task run(type: Exec) {
 }
 
 eclipse.project.name = appName + "-android"
+

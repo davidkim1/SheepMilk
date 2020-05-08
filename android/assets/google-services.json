@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "245980773395",
+    "firebase_url": "https://sheep-milk-e5937.firebaseio.com",
+    "project_id": "sheep-milk-e5937",
+    "storage_bucket": "sheep-milk-e5937.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245980773395:android:4e254f1780ca6057c393e6",
+        "android_client_info": {
+          "package_name": "com.sheepmilk.game"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245980773395-utjsc3qtfucoqclvjipkq61m4mov0f5b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSXSZyjKoGAgoLdt9bHCZt6KRy20A-HeI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245980773395-utjsc3qtfucoqclvjipkq61m4mov0f5b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

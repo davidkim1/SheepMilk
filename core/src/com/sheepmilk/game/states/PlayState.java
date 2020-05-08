@@ -6,15 +6,16 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.sheepmilk.game.SheepMilk;
-import com.sheepmilk.game.sprites.Bird;
+import com.sheepmilk.game.sprites.SpaceShip;
 import com.sheepmilk.game.sprites.Tube;
 
 public class PlayState extends State {
     private static final int TUBE_SPACING = 125;
     private static final int TUBE_COUNT = 4;
     private static final int GROUND_Y_OFFSET = -50;
+    private static int counter = 0;
 
-    private Bird bird;
+    private SpaceShip bird;
     private Texture bg;
     private Texture ground;
     private Vector2 groundPos1, groundPos2;
@@ -23,7 +24,7 @@ public class PlayState extends State {
 
     public PlayState(GameStateManager gsm) {
         super(gsm);
-        bird = new Bird(50, 300);
+        bird = new SpaceShip(50, 300);
         cam.setToOrtho(false, SheepMilk.WIDTH / 2, SheepMilk.HEIGHT / 2);
         bg = new Texture("bg.png");
         ground = new Texture("ground.png");
@@ -57,10 +58,14 @@ public class PlayState extends State {
 
             if(cam.position.x - (cam.viewportWidth / 2) > tube.getPosTopTube().x + tube.getTopTube().getWidth()){
                 tube.reposition(tube.getPosTopTube().x  + ((Tube.TUBE_WIDTH + TUBE_SPACING) * TUBE_COUNT));
+                counter++;
             }
 
-            if(tube.collides(bird.getBounds()))
+            if(tube.collides(bird.getBounds())){
                 gsm.set(new MenuState(gsm));
+                System.out.print(counter + "LONG LIVE TO 2PAC and Lil Wayne YMBCM");
+                counter = 0;
+            }
         }
 
         if(bird.getPosition().y <= ground.getHeight() + GROUND_Y_OFFSET)
@@ -94,6 +99,7 @@ public class PlayState extends State {
             tube.dispose();
 
         System.out.println("Play State Disposed");
+        System.out.print(counter + "LONG LIVE TO 2PAC");
     }
 
     private void updateGround(){

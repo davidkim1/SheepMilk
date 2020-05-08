@@ -10,23 +10,20 @@ import com.badlogic.gdx.math.Vector3;
 import org.w3c.dom.Text;
 import org.w3c.dom.css.Rect;
 
-public class Bird {
+public class SpaceShip {
     private static final int GRAVITY = -15;
     private static final int MOVEMENT = 100;
     private Vector3 position;
     private Vector3 velocity;
     private Rectangle bounds;
-    //private Animation birdAnimation;
-    private Texture bird;
+    private Texture space_ship;
     private Sound flap;
 
-    public Bird(int x, int y){
+    public SpaceShip(int x, int y){
         position = new Vector3(x, y, 0);
         velocity = new Vector3(0, 0, 0);
-        bird = new Texture("bird.png");
-        //texture = new Texture("birdanimation.png");
-        //birdAnimation = new Animation(new TextureRegion(texture), 3, 0.5f);
-        bounds = new Rectangle(x, y, bird.getWidth(), bird.getHeight());
+        space_ship = new Texture("spaceship.png");
+        bounds = new Rectangle(x, y, space_ship.getWidth(), space_ship.getHeight());
         flap = Gdx.audio.newSound(Gdx.files.internal("sfx_wing.ogg"));
     }
 
@@ -48,7 +45,7 @@ public class Bird {
     }
 
     public Texture getTexture() {
-        return bird;
+        return space_ship;
     }
 
     public void jump(){
@@ -61,7 +58,7 @@ public class Bird {
     }
 
     public void dispose(){
-        bird.dispose();
+        space_ship.dispose();
         flap.dispose();
     }
 

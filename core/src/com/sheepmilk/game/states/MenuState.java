@@ -7,6 +7,7 @@ import com.sheepmilk.game.SheepMilk;
 
 public class MenuState extends State{
     private Texture background;
+    private Texture puppy;
     private Texture playBtn;
     public MenuState(GameStateManager gsm) {
         super(gsm);
